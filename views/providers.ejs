@@ -1,0 +1,34 @@
+<h1>Providers</h1>
+<form action="/providers/search" method="get">
+  <label>Search by Speciality:</label>
+  <input type="text" name="speciality" />
+  <button type="submit">Search</button>
+</form>
+
+
+
+
+<table>
+    <thead>
+        <tr>
+            
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Provider_Specialty</th>
+        </tr>
+       
+    
+    </thead>
+<tbody>
+    <% results.forEach(row=> {%>
+        <tr>
+           
+            <td><%= row.first_name %></td>
+            <td><%= row.last_name %></td>
+            <td><%= row.provider_specialty %></td>
+        </tr>
+
+    <%});%>
+</tbody>
+    
+</table>

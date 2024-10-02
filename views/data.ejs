@@ -1,0 +1,35 @@
+<h1>Patients</h1>
+<form action="/data/search" method="get">
+  <label>Search by First Name:</label>
+  <input type="text" name="firstName" />
+  <button type="submit">Search</button>
+</form>
+
+
+<table>
+    <thead>
+        <tr>
+            <th> Patient Id</th>
+            <br>
+            <th> Firstname</th>
+            <br>
+            <th> Lastname </th>
+            <br>
+            <th> Date_of_Birth</th>
+        </tr>
+       
+    
+    </thead>
+<tbody>
+    <% results.forEach(row=> {%>
+        <tr>
+            <td><%= row.patient_id %></td>
+            <td><%= row.first_name %></td>
+            <td><%= row.last_name %></td>
+            <td><%= row.date_of_birth %></td>
+        </tr>
+
+    <%});%>
+</tbody>
+    
+</table>
